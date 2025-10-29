@@ -25,7 +25,7 @@
   --border-radius-circle: 50%;
 
   /* site max width */
-  --site-max-width: 0 clamp(10px, 5vw, 3rem);
+  --site-max-width: clamp(10px, 5vw, 3rem);
 }
 
 @font-face {
@@ -78,9 +78,7 @@ button {
 .section-nav {
   background-color: var(--primary-color-dark);
   height: 70px;
-  padding: var(--site-max-width);
-  position: sticky;
-  top: 0;
+  padding: 0 var(--site-max-width);
 }
 
 .nav-bar {
@@ -119,6 +117,7 @@ button {
   gap: 1rem;
   flex-direction: column;
   transition: .3s linear;
+  z-index: 20;
 }
 
 .open-menu {

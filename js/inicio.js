@@ -18,8 +18,8 @@ function escribirEspecialidad() {
   if (j < miEspecialidad.length) {
     document.getElementById('miEspecialidad').innerHTML += miEspecialidad.charAt(j);
     j++;
-    setTimeout(escribirEspecialidad, 100)
+    setTimeout(escribirEspecialidad, 100);
   }
 }
 
-escribirNombre()
+escribirNombre();
