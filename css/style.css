@@ -187,7 +187,8 @@
   font-size: var(--fs-l);
   border-radius: var(--border-radius-s);
   user-select: none;
-  padding: .5rem;
+  height: 40px;
+  align-items: center;
 }
 
 .section__sobremi--info {
