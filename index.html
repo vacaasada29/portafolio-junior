@@ -17,17 +17,17 @@
       <button class="nav-open-menu" id="openMenu"><i class="fa-solid fa-bars-staggered"></i></button>
       <button class="nav-close-menu" id="closeMenu"><i class="fa-solid fa-xmark"></i></button>
       <ul id="menu" class="nav-list">
-        <li class="nav-item"><a href="#" class="nav-link">Inicio</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Sobre mi</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Proyectos</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Habilidades</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
+        <li class="nav-item"><a href="#inicio" class="nav-link">Inicio</a></li>
+        <li class="nav-item"><a href="#sobremi" class="nav-link">Sobre mi</a></li>
+        <li class="nav-item"><a href="#proyectos" class="nav-link">Proyectos</a></li>
+        <li class="nav-item"><a href="#habilidades" class="nav-link">Habilidades</a></li>
+        <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="section__inicio">
+    <section id="inicio" class="section__inicio">
       <div class="section__inicio--perfil">
         <h1 id="miNombre"></h1>
         <div class="inicio__especialidad">
@@ -42,6 +42,30 @@
       <div class="section__inicio--imagen">
         <img src="./img/img_personal.webp" alt="">
       </div>
+    </section>
+
+    <section id="sobremi" class="section__sobremi">
+      <div class="section__sobremi--encabezado">
+        <h2 class="subtitulo">Acerca de mí</h2>
+        <p class="subtitulo">Aquí encontrarás más información sobre mí, lo que hago y mi Habilidades actuales principalmente en términos de programación y tecnología</p>
+      </div>
+      <div class="section__sobremi--wrapper">
+        <div class="section__sobremi--imagen">
+          <img src="./img/img_personal.webp" alt="">
+        </div>
+        <div class="section__sobremi--info">
+          <h3 class="section__sobremi--titulo">Sobre mi</h3>
+          <div class="section__sobremi--description">
+            <p>Soy Junior, desarrollador Front-End certificado por IDAT. Durante mi formación aprendí a construir interfaces modernas, interactivas y centradas en la experiencia del usuario, combinando diseño y programación para lograr resultados profesionales.</p><br>
+            <p>Manejo tecnologías como HTML5, CSS3, JavaScript y React, aplicando principios de diseño responsivo, optimización de rendimiento y accesibilidad web. También utilizo Git y GitHub para el control de versiones, trabajo colaborativo y despliegue de proyectos.</p><br>
+            <p>Me apasiona transformar ideas en sitios web funcionales, limpios y visualmente atractivos. Busco seguir perfeccionando mis habilidades en el ecosistema Front-End y mantenerme actualizado con las tendencias y herramientas más recientes del desarrollo web moderno.</p><br>
+          </div>
+          <div class="section__sobremi--links">
+            <a href="#contacto">Contacto</a>
+            <a href="./archivos/CV_Profesional_Juan_Junior_Niño_Ponce_v2.docx" download="">Descargar CV</a>
+          </div>
+        </div>
+      </div>  
     </section>
   </main>
 

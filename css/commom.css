@@ -3,7 +3,7 @@
 :root {
   /* color */
   --primary-color: #000;
-  --secondary-color: #ffffff;
+  --secondary-color: #c9c9c9;
   --primary-color-dark: #ffb246;
   --secondary-color-dark: #ffd08f;
 
@@ -79,6 +79,9 @@ button {
   background-color: var(--primary-color-dark);
   height: 70px;
   padding: 0 var(--site-max-width);
+  position: sticky;
+  top: 0;
+  z-index: 20;
 }
 
 .nav-bar {
