@@ -162,9 +162,10 @@
 }
 
 .section__sobremi--habilidades div {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .5rem;
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  gap: .5rem;  
+  width: 100%;
 }
 
 .section__sobremi--habilidades button {
@@ -173,7 +174,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80px;
   height: 30px;
   border-radius: var(--border-radius-s);
 }
@@ -187,6 +187,7 @@
   font-size: var(--fs-l);
   border-radius: var(--border-radius-s);
   user-select: none;
+  padding: .5rem;
 }
 
 .section__sobremi--info {
@@ -248,5 +249,29 @@
 
   .section__sobremi--imagen img {
     transform: rotate(0);
+  }
+}
+
+@media screen and (max-width:600px) {
+  .section__sobremi--habilidades div {
+    grid-template-columns: repeat(5,1fr);
+  }
+}
+
+@media screen and (max-width:500px) {
+  .section__sobremi--habilidades div {
+    grid-template-columns: repeat(4,1fr);
+  }
+}
+
+@media screen and (max-width:400px) {
+  .section__sobremi--habilidades div {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+@media screen and (max-width:300px) {
+  .section__sobremi--habilidades div {
+    grid-template-columns: repeat(2,1fr);
   }
 }
