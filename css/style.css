@@ -467,15 +467,14 @@
   color: var(--secondary-color);
   font-size: var(--fs-l);
 }
+@media screen and (min-width: 600px) {
+  .habilidades__list {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
 
 @media screen and (min-width: 950px) {
   .habilidades__list {
     grid-template-columns: repeat(3,1fr);
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .habilidades__list {
-    grid-template-columns: repeat(2,1fr);
   }
 }
