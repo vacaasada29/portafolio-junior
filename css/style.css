@@ -108,7 +108,7 @@
   color: var(--secondary-color);
 }
 
-.section__sobremi--encabezado {
+.section__encabezado {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,7 +116,7 @@
   text-align: center;
 }
 
-.section__sobremi--encabezado h2 {
+.section__encabezado h2 {
   color: var(--primary-color-dark);
   font-size: var(--fs-xl);
   position: relative;
@@ -127,7 +127,7 @@
   font-family: "principal";
 }
 
-.section__sobremi--encabezado h2::before {
+.section__encabezado h2::before {
   position: absolute;
   content: "";
   top: 100%;
@@ -137,9 +137,10 @@
   border-radius: var(--border-radius-s);
 }
 
-.section__sobremi--encabezado p {
+.section__encabezado p {
   font-size: 1.15rem;
   max-width: 800px;
+  color: var(--secondary-color);
 }
 
 .section__sobremi--wrapper {
@@ -274,5 +275,87 @@
 @media screen and (max-width:300px) {
   .section__sobremi--habilidades div {
     grid-template-columns: repeat(2,1fr);
+  }
+}
+/* fin de la seccion de sobre mi  */
+
+
+
+
+
+/* inicio de la seccion de proyectos */
+.section__proyectos {
+  min-height: 100dvh;
+  background-color: var(--primary-color);
+  padding: 100px var(--site-max-width);
+}
+
+.proyectos__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.proyecto__item {
+  width: 100%;
+  border-radius: var(--border-radius-s);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.2);
+  transition: .2s linear;
+}
+
+.proyecto__item:hover,
+.proyecto__item:active {
+  box-shadow: 0 0 30px rgba(255,255,255,.3);
+  background-color: rgba(255,255,255,.1);
+}
+
+.proyecto__imagen img {
+  width: 100%;
+  display: block;
+  cursor: zoom-in;
+  transition: .3s linear;
+  transform-origin: bottom;
+}
+
+.proyecto__imagen img.active {
+  scale: 1.2;
+  cursor: zoom-out;
+}
+
+.proyecto__links {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: .5rem;
+}
+
+.proyecto__links > * {
+  color: var(--secondary-color);
+  font-size: var(--fs-l);
+  cursor: url(../img/cursor__pointer.webp), pointer;
+  width: 100%;
+  text-align: center;
+  padding: .5rem;
+  transition: .3s linear;
+}
+
+.proyecto__links > *:hover,
+.proyecto__links > *:active {
+  background-color: var(--primary-color-dark);
+  color: var(--primary-color);
+}
+
+@media screen and (min-width:600px) {
+  .proyectos__list {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media screen and (min-width:950px) {
+  .proyectos__list {
+    grid-template-columns: repeat(3,1fr);
   }
 }

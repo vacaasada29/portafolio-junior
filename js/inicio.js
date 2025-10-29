@@ -51,3 +51,26 @@ document.querySelectorAll('.btn__habilidad').forEach((btnHabilidad) => {
     mostrarHabilidad.textContent = habilidades[id] || ""
   });
 });
+
+/* seccion de animacion de las imagenes de proyecots */
+const imgProyecto = document.querySelectorAll('.proyecto__imagen img');
+
+// Activar una imagen y desactivar las demás
+imgProyecto.forEach(img => {
+  img.addEventListener('click', (e) => {
+    e.stopPropagation(); // evita que el click se propague al document
+
+    imgProyecto.forEach(otherImg => {
+      if (otherImg !== img) {
+        otherImg.classList.remove('active');
+      }
+    });
+
+    img.classList.toggle('active');
+  });
+});
+
+// Si haces clic en cualquier parte del documento, se quitan todas las activas
+document.addEventListener('click', () => {
+  imgProyecto.forEach(img => img.classList.remove('active'));
+});
