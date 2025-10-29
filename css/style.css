@@ -1,0 +1,56 @@
+/* seccion de inicio */
+.section-inicio {
+  padding: 100px 20px;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  text-align: center;
+  gap: 1rem;
+}
+
+.inicio-saludo,
+.inicio-soy {
+  font-size: var(--fs-m)
+}
+
+#miNombre {
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  font-family: "principal";
+}
+
+#miEspecialidad,
+#miNombre {
+  color: var(--primary-color-dark);
+}
+
+.inicio__especialidad {
+  display: flex;
+  gap: 1rem;
+}
+
+.inicio-description {
+  font-size: var(--fs-m);
+  width: 100%;
+  max-width: 700px;
+}
+
+.inicio__btn {
+  padding: 1.1rem 3rem;
+  margin-top: 20px;
+  background-color: var(--primary-color-dark);
+  border-radius: var(--border-radius-s);
+  font-size: var(--fs-l);
+  color: var(--primary-color);
+  font-family: "principal";
+  transition: .3s linear;
+}
+
+.inicio__btn:hover,
+.inicio__btn:active {
+  background-color: var(--secondary-color-dark);
+  scale: 1.1;
+}

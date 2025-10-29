@@ -1,0 +1,141 @@
+
+/* inicio de la seccion de generales */
+:root {
+  /* color */
+  --primary-color: #000;
+  --secondary-color: #ffffff;
+  --primary-color-dark: #ffb246;
+  --secondary-color-dark: #ffd08f;
+
+  /* font-size */
+  --fs-s: clamp(0.75rem, 0.6vw + 0.5rem, 0.875rem);
+  --fs-x: clamp(0.875rem, 0.8vw + 0.6rem, 1rem);    
+  --fs-m: clamp(1rem, 1vw + 0.8rem, 1.25rem);       
+  --fs-l: clamp(1.25rem, 1.2vw + 1rem, 1.5rem);       
+  --fs-xl: clamp(1.5rem, 1.5vw + 1.2rem, 2rem);        
+  --fs-xxl: clamp(2rem, 2vw + 1.5rem, 3rem); 
+
+  /* font-weight */
+  --font-weight-normal: 400;
+  --font-weight-bold: 900;
+
+  /* border-radius */
+  --border-radius-s: 8px;
+  --border-radius-m: 30px;
+  --border-radius-circle: 50%;
+
+  /* site max width */
+  --site-max-width: 0 clamp(10px, 5vw, 3rem);
+}
+
+@font-face {
+  font-family: "principal";
+  src: url(../fuentes/Poppins-Black.ttf);
+}
+
+@font-face {
+  font-family: "secundario";
+  src: url(../fuentes/Inter-Medium.ttf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  cursor: url(./img/cursor__auto.webp),auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: url(./img/cursor__pointer.webp), pointer;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: url(../img/cursor__pointer.webp), pointer;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "secundario";
+}
+/* fin de la seccion de generales */
+
+
+
+
+
+/* inicio de la seccion de navegacion */
+.section-nav {
+  background-color: var(--primary-color-dark);
+  height: 70px;
+  padding: var(--site-max-width);
+  position: sticky;
+  top: 0;
+}
+
+.nav-bar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px 0;
+  align-items: center;
+}
+
+.nav-logo {
+  max-width: 100%;
+  width: 50px;
+}
+
+.nav-open-menu {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+.nav-close-menu {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  display: none;
+}
+
+.nav-list {
+  position: fixed;
+  right: -300px;
+  top: 70px;
+  width: 300px;
+  height: 100%;
+  background-color: var(--primary-color-dark);
+  padding: 2rem 0;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  transition: .3s linear;
+}
+
+.open-menu {
+  right: 0;
+}
+
+.nav-link {
+  padding: 1.5rem 1rem;
+  width: 100%;
+  display: block;
+  color: var(--primary-color);
+  font-size: var(--fs-m);
+  font-family: "secundario";
+}
+
+.nav-link:hover,
+.nav-link:active {
+  background-color: var(--secondary-color-dark);
+  cursor: url(../img/cursor__pointer.webp),pointer;
+}
