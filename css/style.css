@@ -359,3 +359,123 @@
     grid-template-columns: repeat(3,1fr);
   }
 }
+/* fin de seccion de proyectos */
+
+
+
+
+
+/* inicio de seccion de habilidades */
+.section__habilidades {
+  min-height: 100dvh;
+  background-color: var(--primary-color);
+  padding: 100px var(--site-max-width);
+  overflow: hidden;
+}
+
+.section__habilidades--wrapper {
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+.habilidades__slides  {
+  display: flex;
+  width: 200%;
+  transition: transform .5s linear;
+}
+
+.habilidades__list {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+
+.habilidades__uno li:nth-of-type(1) i {
+  color: #E34F26;
+}
+.habilidades__uno li:nth-of-type(2) i {
+  color: #1572B6;
+}
+.habilidades__uno li:nth-of-type(3) i {
+  color: #F7DF1E;
+}
+.habilidades__uno li:nth-of-type(4) i {
+  color: #61DAFB;
+}
+.habilidades__uno li:nth-of-type(5) i {
+  color: #339933;
+}
+.habilidades__uno li:nth-of-type(6) i {
+  color: #7952B3;
+}
+
+.habilidades__dos li:nth-of-type(1) i {
+  color: #CC6699;
+}
+.habilidades__dos li:nth-of-type(2) i {
+  color: #CB3837;
+}
+.habilidades__dos li:nth-of-type(4) i {
+  color: #F05033;
+}
+.habilidades__dos li:nth-of-type(5) i {
+  color: #c8c8c8;
+}
+.habilidades__dos li:nth-of-type(6) i {
+  color: #4479A1;
+}
+
+.habilidades__subitem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: var(--border-radius-m);
+}
+
+.habilidades__subitem:hover,
+.habilidades__subitem:active {
+  box-shadow: 0 0 30px rgba(255,255,255,.3);
+}
+
+.habilidades__subitem i,
+.habilidades__subitem img {
+  font-size: 3rem;
+  width: 3rem;
+}
+
+.habilidades__subitem h3 {
+  color: var(--secondary-color);
+}
+
+.cambiar__habilidades {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.cambiar__habilidades button {
+  color: var(--secondary-color);
+  font-size: var(--fs-l);
+}
+
+@media screen and (min-width: 950px) {
+  .habilidades__list {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .habilidades__list {
+    grid-template-columns: repeat(2,1fr);
+  }
+}

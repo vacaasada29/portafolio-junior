@@ -74,3 +74,42 @@ imgProyecto.forEach(img => {
 document.addEventListener('click', () => {
   imgProyecto.forEach(img => img.classList.remove('active'));
 });
+
+/* seccion de habilidades slider */
+const slides = document.querySelector('.habilidades__slides');
+const nextBtn = document.getElementById('nextHabilidad');
+const prevBtn = document.getElementById('prevHabilidad');
+let index = 0;
+
+nextBtn.addEventListener('click', () => {
+  if (index < 1) {
+    index++;
+    slides.style.transform = 'translateX(-50%)';
+  }
+  actualizarBotones();
+});
+
+prevBtn.addEventListener('click', () => {
+  if (index > 0) {
+    index--;
+    slides.style.transform = 'translateX(0)';
+  }
+  actualizarBotones();
+});
+
+function actualizarBotones() {
+  const colorActivo = getComputedStyle(document.documentElement)
+    .getPropertyValue('--primary-color-dark')
+    .trim();
+
+  // resetear colores
+  nextBtn.style.color = '';
+  prevBtn.style.color = '';
+
+  // marcar el botón activo
+  if (index === 0) prevBtn.style.color = colorActivo;
+  if (index === 1) nextBtn.style.color = colorActivo;
+}
+
+// ✅ color por defecto al inicio
+actualizarBotones();
