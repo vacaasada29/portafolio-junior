@@ -1,4 +1,4 @@
-const miNombre = "Hola soy, Junior Niño Ponce";
+const miNombre = "Junior Niño Ponce";
 const miEspecialidad = "Desarrollador Front-End";
 
 let i = 0;

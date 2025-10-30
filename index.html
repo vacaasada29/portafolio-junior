@@ -13,14 +13,14 @@
 <body>
   <header class="section-nav">
     <nav class="nav-bar">
-      <img class="nav-logo" src="./img/logo_con_fondo.png" alt="">
+      <a href="#inicio"><img class="nav-logo" src="./img/logo_con_fondo.png" alt=""></a>
       <button class="nav-open-menu" id="openMenu"><i class="fa-solid fa-bars-staggered"></i></button>
       <button class="nav-close-menu" id="closeMenu"><i class="fa-solid fa-xmark"></i></button>
       <ul id="menu" class="nav-list">
-        <li class="nav-item"><a href="#inicio" class="nav-link">Inicio</a></li>
+        <li class="nav-item"><a href="#inicio" class="nav-link activo">Inicio</a></li>
         <li class="nav-item"><a href="#sobremi" class="nav-link">Sobre mi</a></li>
         <li class="nav-item"><a href="#proyectos" class="nav-link">Proyectos</a></li>
-        <li class="nav-item"><a href="#habilidades" class="nav-link">Habilidades</a></li>
+        <li class="nav-item"><a href="#habilidades" class="nav-link">Conocimientos</a></li>
         <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
       </ul>
     </nav>
@@ -29,17 +29,26 @@
   <main>
     <section id="inicio" class="section__inicio">
       <div class="section__inicio--perfil">
-        <h1 id="miNombre"></h1>
-        <div class="inicio__especialidad">
+        <div>
+          <p class="inicio-saludo">Hola, soy</p>
+          <h1 id="miNombre"></h1>
+          <div class="inicio__especialidad">
           <p class="inicio-saludo">y soy</p>
           <h2 id="miEspecialidad"></h2>
+        </div>
         </div>
         <p class="inicio__description">
           Experiencia en HTML, CSS, JavaScript y React. Diseño interfaces responsivas y fluidas, adaptadas al usuario real. Versiono con lógica y aplico estrategias visuales para optimizar cada interacción.
         </p>
+        <div class="inicio__links">
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+          <a href=""><i class="fa-brands fa-tiktok"></i></a>
+          <a href=""><i class="fa-brands fa-linkedin"></i></a>
+        </div>
         <a href="#proyectos" class="inicio__btn">Proyectos</a>
       </div>
-      <div class="section__inicio--imagen">
+      <div class="imagen__personal">
         <img src="./img/img_personal.webp" alt="">
       </div>
     </section>
@@ -62,24 +71,9 @@
             <a href="./archivos/CV_Profesional_Juan_Junior_Niño_Ponce_v2.docx" download="">Descargar CV</a>
           </div>
         </div>
-        <div class="section__sobremi--habilidades">
-          <h3>Adivina mis habilidades</h3>
-          <p>Cada letra tiene un propósito. No están ahí por estética, sino como pistas. Si observas bien, podrás adivinar qué habilidades están</p>
-          <div>
-            <button class="btn__habilidad" id="html">T</button>
-            <button class="btn__habilidad" id="css">S</button>
-            <button class="btn__habilidad" id="js">V</button>
-            <button class="btn__habilidad" id="react">E</button>
-            <button class="btn__habilidad" id="nodejs">D</button>
-            <button class="btn__habilidad" id="bootstrap">P</button>
-            <button class="btn__habilidad" id="sass">A</button>
-            <button class="btn__habilidad" id="npm">M</button>
-            <button class="btn__habilidad" id="vscode">C</button>
-            <button class="btn__habilidad" id="git">I</button>
-            <button class="btn__habilidad" id="github">H</button>
-            <button class="btn__habilidad" id="mysql">Q</button>
-          </div>
-          <h4 id="mostrarHabilidad"></h4>
+        
+        <div class="imagen__personal">
+          <img src="./img/img_personal.webp" alt="">
         </div>
       </div>  
     </section>
@@ -150,7 +144,7 @@
 
     <section id="habilidades" class="section__habilidades">
       <div class="section__encabezado">
-        <h2>Habilidade</h2>
+        <h2>Conocimientos</h2>
         <p>Tecnologías, lenguajes y recursos que aplico para construir, animar y mantener interfaces web modernas.</p>
         <div class="section__habilidades--wrapper">
           <div class="habilidades__slides">

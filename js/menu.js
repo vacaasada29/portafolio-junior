@@ -13,3 +13,15 @@ closeMenu.addEventListener('click', () => {
   openMenu.style.display = 'block';
   closeMenu.style.display = 'none'
 })
+
+const links = document.querySelectorAll('.nav-link');
+
+links.forEach(link => {
+  link.addEventListener('click', () => {
+    // Quitar clase 'activo' de todos los <a>
+    links.forEach(l => l.classList.remove('activo'));
+
+    // Agregar clase 'activo' al <a> clickeado
+    link.classList.add('activo');
+  });
+});

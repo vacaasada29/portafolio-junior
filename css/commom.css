@@ -76,7 +76,7 @@ button {
 
 /* inicio de la seccion de navegacion */
 .section-nav {
-  background-color: var(--primary-color-dark);
+  background-color: var(--primary-color);
   height: 70px;
   padding: 0 var(--site-max-width);
   position: sticky;
@@ -98,23 +98,50 @@ button {
 }
 
 .nav-open-menu {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
+  color: var(--secondary-color);
+  padding: .3rem;
+}
+
+.btnGirar{
+  animation: openMenu 1s linear 1;
+}
+
+@keyframes openMenu {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.nav-open-menu:hover {
+  background-color: var(--secondary-color-dark);
   color: var(--primary-color);
+  border-radius: var(--border-radius-circle);
 }
 
 .nav-close-menu {
-  font-size: 2.5rem;
-  color: var(--primary-color);
+  font-size: 1.8rem;
+  color: var(--secondary-color);
   display: none;
+  padding: .3rem;
+}
+
+.nav-close-menu:hover {
+  background-color: red;
+  border-radius: var(--border-radius-circle);
 }
 
 .nav-list {
   position: fixed;
-  right: -300px;
+  right: -320px;
   top: 70px;
   width: 300px;
   height: 100%;
-  background-color: var(--primary-color-dark);
+  background-color: var(--primary-color);
   padding: 2rem 0;
   display: flex;
   gap: 1rem;
@@ -131,7 +158,7 @@ button {
   padding: 1.5rem 1rem;
   width: 100%;
   display: block;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-size: var(--fs-m);
   font-family: "secundario";
 }
@@ -140,4 +167,31 @@ button {
 .nav-link:active {
   background-color: var(--secondary-color-dark);
   cursor: url(../img/cursor__pointer.webp),pointer;
+  color: var(--primary-color);
+}
+
+.nav-link.activo {
+  box-shadow: 0 0 20px var(--primary-color-dark);
+  background-color: var(--primary-color-dark);
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+@media screen and (min-width:750px) {
+  .nav-list {
+    position: static;
+    flex-direction: row;
+    padding: 0;
+    width: auto;
+    transition: none;
+  }
+
+  .nav-open-menu {
+    display: none;
+  }
+
+  .nav-link {
+    padding: .5rem;
+    border-radius: var(--border-radius-m);
+  }
 }
