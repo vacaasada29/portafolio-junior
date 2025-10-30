@@ -2,7 +2,7 @@
 /* inicio de la seccion de generales */
 :root {
   /* color */
-  --primary-color: #000;
+  --primary-color: #000000;
   --secondary-color: #c9c9c9;
   --primary-color-dark: #ffb246;
   --secondary-color-dark: #ffd08f;
@@ -92,9 +92,28 @@ button {
   align-items: center;
 }
 
+.nav-bar > a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: var(--fs-s);
+}
+
+.nav-bar > a:hover,
+.nav-bar > a:active {
+  color: var(--primary-color-dark);
+}
+
 .nav-logo {
   max-width: 100%;
   width: 50px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--border-radius-circle);
+  object-position: 80%;
 }
 
 .nav-open-menu {
@@ -177,7 +196,7 @@ button {
   font-weight: bold;
 }
 
-@media screen and (min-width:750px) {
+@media screen and (min-width:950px) {
   .nav-list {
     position: static;
     flex-direction: row;

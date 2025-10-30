@@ -133,3 +133,20 @@ form.addEventListener("submit", (e) => {
     form.submit(); // se envía el formulario
   }
 });
+
+
+
+
+
+
+// inicio de la seccion de proyectos
+document.addEventListener("DOMContentLoaded", () => {
+  const botones = document.querySelectorAll(".btn-proyecto");
+
+  botones.forEach(boton => {
+    boton.addEventListener("click", () => {
+      const idProyecto = boton.dataset.proyecto;
+      window.location.href = `./proyectos.html?proyecto=${idProyecto}`;
+    });
+  });
+});
