@@ -128,20 +128,6 @@ h3 {
   padding: .3rem;
 }
 
-.btnGirar{
-  animation: openMenu 1s linear 1;
-}
-
-@keyframes openMenu {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 .nav-open-menu:hover {
   background-color: var(--secondary-color-dark);
   color: var(--primary-color);
@@ -188,12 +174,6 @@ h3 {
   font-family: "secundario";
 }
 
-.nav-link:hover,
-.nav-link:active {
-  background-color: var(--secondary-color-dark);
-  cursor: url(../img/cursor__pointer.webp),pointer;
-  color: var(--primary-color);
-}
 
 .nav-link.activo {
   box-shadow: 0 0 20px var(--primary-color-dark);
