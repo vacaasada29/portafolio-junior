@@ -31,30 +31,32 @@ escribirNombre();
 
 /* seccion de animacion de las imagenes de proyecots */
 const imgProyecto = document.querySelectorAll('.proyecto__imagen img');
+const proyectoInfo = document.querySelectorAll('.proyecto__info');
 
-imgProyecto.forEach(img => {
+// Activación sincronizada
+imgProyecto.forEach((img, index) => {
   img.addEventListener('click', (e) => {
-    e.stopPropagation(); // evita que el click se propague al document
+    e.stopPropagation();
 
-    imgProyecto.forEach(otherImg => {
-      if (otherImg !== img) {
-        otherImg.classList.remove('active');
-      }
-    });
+    // Desactiva todos
+    imgProyecto.forEach(otherImg => otherImg.classList.remove('active'));
+    proyectoInfo.forEach(info => info.classList.remove('active'));
 
-    img.classList.toggle('active');
+    // Activa el seleccionado
+    img.classList.add('active');
+    proyectoInfo[index].classList.add('active');
   });
 });
-/* fin de la animacion de las imagenes de proyectos */
 
-
-
-
-
-// Si haces clic en cualquier parte del documento, se quitan todas las activas
+// Cierre global al hacer clic fuera
 document.addEventListener('click', () => {
   imgProyecto.forEach(img => img.classList.remove('active'));
+  proyectoInfo.forEach(info => info.classList.remove('active'));
 });
+
+
+
+
 
 /* seccion de habilidades slider */
 const slides = document.querySelector('.habilidades__slides');
